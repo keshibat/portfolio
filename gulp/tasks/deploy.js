@@ -1,14 +1,14 @@
 const gulp = require('gulp');
 const surge = require('gulp-surge');
 const browserSync = require('browser-sync');
-const rsync = require('rsyncwrapper').rsync;
+const rsync = require('rsyncwrapper');
 
 
 // require config
 const config = require('../config.js');
 
 // require creds
-// const creds =  require('../../secrets.json');
+const creds =  require('../../secrets.json');
 
 // run dist in local server
 gulp.task('serve:dist', function() {
@@ -22,22 +22,22 @@ gulp.task('serve:dist', function() {
 })
 
 // rsync task
-// gulp.task('rsync', function() {
-// 	rsync({
-// 		src: 'dist/',
-// 		// keep dest in secrets.json
-// 		dest: creds.dest,
-// 		ssh: true,
-// 		recursive: true,
-// 		deleteAll: true
-// 	}, function(error, stdout, stderr, cmd) {
-// 		if (error) {
-// 			console.log(error.message);
-// 			console.log(stdout);
-// 			console.log(stderr);
-// 		}
-// 	});
-// })
+gulp.task('rsync', function() {
+	rsync({
+		src: 'dist/',
+		// keep dest in secrets.json
+		dest: creds.dest,
+		ssh: true,
+		recursive: true,
+		deleteAll: true
+	}, function(error, stdout, stderr, cmd) {
+		if (error) {
+			console.log(error.message);
+			console.log(stdout);
+			console.log(stderr);
+		}
+	});
+})
 
 // deploy to surge.sh
 gulp.task('surge', [], function () {
