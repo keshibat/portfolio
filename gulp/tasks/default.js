@@ -6,7 +6,7 @@ gulp.task('default', function(callback) {
 	runSequence(
 		'clean:dev', 
 		['sprites', 'lint:js', 'lint:scss'],
-		'sass',
+		['sass', 'images'],
 		['browserSync', 'watch'],
 		callback
 		);

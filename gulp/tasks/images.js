@@ -72,6 +72,6 @@ gulp.task('images', function(callback) {
 
 // 'build' task i.e. moves app/images to dist/images
 gulp.task('build-images', function() {
-    return gulp.src('./app/images/')
-        .pipe(gulp.dest('./dist/images/'));
+    return gulp.src('app/images/**/*')
+        .pipe(gulp.dest('dist/images'));
 });
