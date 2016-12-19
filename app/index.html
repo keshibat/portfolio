@@ -9,14 +9,24 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-				
-				<!-- build:css css/styles.min.css -->
-        <link rel="stylesheet" href="css/normalize.scss">
-        <link rel="stylesheet" href="css/main.scss">
-				<!-- endbuild -->
 
-				<!-- build:js js/async.modernizr-2.8.3.min.js -->
+        <!-- build:css css/vendor.min.css -->
+        <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <!-- endbuild -->
+				
+		<!-- build:css css/styles.min.css -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- endbuild -->
+
+		<!-- build:js js/vendor.js -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+        </script>
+        <script src="scripts/picturefill.js" async></script>
+        <script src="https://use.fontawesome.com/3e19548892.js"></script>
         <!-- endbuild -->
     </head>
     <body>
@@ -24,8 +34,26 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <!-- Header -->
+        <header class="header">
+          <div class="header__inner">
+            <img class="header__logo" src="images/SA_profile_image.svg" alt="Avatar of Sam Atkins">
+            <h1 class="header__title">
+              Sam Atkins - Full Stack Engineer
+            </h1>
+            <a id="menu" class="header__menu">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </header>
+
+        <nav id="drawer" class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#portfolio">Portfolio</a></li>
+            <li class="nav__item"><a href="#about">About</a></li>
+            <li class="nav__item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
 
 				<!-- build:js js/main.concat.js -->
