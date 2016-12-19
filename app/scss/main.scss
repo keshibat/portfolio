@@ -19,7 +19,6 @@ body {
 }
 
 a {
-  // text-decoration: none;
   background: #fafafa;
   font-family: 'Roboto', sans-serif;
   color: #333;
@@ -77,8 +76,6 @@ a:hover {
 .header__menu {
   display: flex;
   align-self: center;
-  // padding-left: 4em;k
-  // background-color: #EFEFEF;
 }
 
 /* ==========================================================================
@@ -94,7 +91,6 @@ a:hover {
 .nav__list {
   display: flex;
   justify-content: flex-start;
-  // flex: 1;
   max-width: 100%;
   padding: 0;
   margin: 0;
@@ -113,11 +109,8 @@ a:hover {
 }
 
 .nav a {
-/*   background-color: #FAFAFA; */
   text-decoration: none;
   color: #616161;
-  // background-color: white;
-  // padding: 1.5em;
 }
 
 .nav a:hover {
@@ -137,9 +130,6 @@ Hero Section
 }
 
 .hero__intro {
-  /* for testing only */
-  // border:1px solid black;
-
   max-width: 55%;
   padding: 10px;
   margin-left: auto;
@@ -169,13 +159,6 @@ Hero Section
   line-height: 30px;
   background-color: #eee;
   border-radius: 6px;
-
-  /* this shifts to 2 wide column - check for media break points */
-  // padding: 100px;
-  
-  /* for testing only */
-  // border:1px solid blue;
-  
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -193,9 +176,6 @@ Hero Section
 
 /* flex container */
 .portfolio__wrapper {
-  /* for testing only */
-  // border:1px solid black;
-
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
@@ -208,9 +188,6 @@ Hero Section
 }
 
 .project__title {
-  /* for testing only */
-  // border:1px solid black;
-
   text-align: center;
   padding-bottom: 10px;
 }
@@ -252,8 +229,6 @@ a.project__url {
     text-align: center;
     padding-top: 10px;
   }
-  /* for testing only */
-  // border:1px solid black;
 }
 
 .about__wrapper {
@@ -273,8 +248,6 @@ a.project__url {
   h2 {
     font-size: 25px;
   }
-  /* for testing only */
-  // border:1px solid blue;
 }
 
 .about__back {
@@ -288,8 +261,6 @@ a.project__url {
   h2 {
     font-size: 25px;
   }
-  /* for testing only */
-  // border:1px solid blue;
 }
 
 .about__tools {
@@ -303,8 +274,6 @@ a.project__url {
   h2 {
     font-size: 25px;
   }
-  /* for testing only */
-  // border:1px solid blue;
 }
 
 /* ==========================================================================
@@ -318,9 +287,7 @@ a.project__url {
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  // background-color: #eee;
   border-radius: 6px;
-  // padding: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -330,15 +297,9 @@ a.project__url {
   .contact__text {
     text-align: center;
   }
-
-  /* testing purposes only */
-  // border:1px solid black;
 }
 
 .contact__header {
-  /* testing purposes only */
-  // border:1px solid blue;
-
   display:flex;
   align-self: center;
 }
@@ -351,9 +312,6 @@ a.project__url {
 }
 
 .contact__logos {
-  /* testing purposes only */
-  // border:1px solid blue;
-
   list-style: none;
   display:flex;
   justify-content: space-between;
@@ -370,7 +328,6 @@ a.project__url {
 ========================================================================== */
 
 .footer__wrapper {
-  // border:1px solid black;
   display:flex;
   justify-content: center;
   padding: 50px;
