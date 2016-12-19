@@ -149,3 +149,80 @@ Hero Section
   font-size: 12px;
   font-weight: bold;
 }
+
+/* ==========================================================================
+  Portfolio Section 
+========================================================================== */
+
+.portfolio__section {
+  width: 300px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+
+  /* this shifts to 2 wide column - check for media break points */
+  // padding: 100px;
+  
+  /* for testing only */
+  // border:1px solid blue;
+  
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  .portfolio__header {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .portfolio__subheader {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+/* flex container */
+.portfolio__wrapper {
+  /* for testing only */
+  // border:1px solid black;
+
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.project__wrapper {
+  background-color: #FFFFFF;
+  border: 1px solid gray;
+
+}
+
+.project__title {
+  /* for testing only */
+  // border:1px solid black;
+
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.project__img {
+  padding: 10px;
+  max-width: 350px;
+  height: auto;
+}
+
+.project__links {
+  display: flex;
+  max-width: 80%;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+a.project__url {
+  background-color: #FFFFFF;
+}
+
