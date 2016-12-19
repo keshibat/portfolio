@@ -8,7 +8,7 @@ The site must follow HTML and CSS guidelines.
 *Work in Progress*
 
 ## Source Code
-Source code is located in the [app](#url) folder.
+Source code is located in the [app](https://github.com/cubiio/portfolio/tree/master/app) folder.
 
 ## Built with 
 - HTML
