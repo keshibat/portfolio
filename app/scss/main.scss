@@ -299,3 +299,76 @@ a.project__url {
   // border:1px solid blue;
 }
 
+/* ==========================================================================
+  Contact section
+========================================================================== */
+
+// flex container 
+.contact__wrapper {
+  margin: 50px auto 0 auto;
+  width: 65%;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  // background-color: #eee;
+  border-radius: 6px;
+  // padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .contact__header {
+    font-size: 25px;
+  }
+  .contact__text {
+    text-align: center;
+  }
+
+  /* testing purposes only */
+  // border:1px solid black;
+}
+
+.contact__header {
+  /* testing purposes only */
+  // border:1px solid blue;
+
+  display:flex;
+  align-self: center;
+}
+
+.contact__img {
+  display: flex;
+  align-self: center;
+  width: 150px;
+  border-radius: 75px;
+}
+
+.contact__logos {
+  /* testing purposes only */
+  // border:1px solid blue;
+
+  list-style: none;
+  display:flex;
+  justify-content: space-between;
+
+}
+
+.contact__logos .social {
+  align-self: center;
+  flex:1;
+}
+
+/* ==========================================================================
+  Footer section
+========================================================================== */
+
+.footer__wrapper {
+  // border:1px solid black;
+  display:flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.footer__container {
+  display:flex;
+  justify-content: center;
+}
