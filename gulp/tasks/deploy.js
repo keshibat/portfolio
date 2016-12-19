@@ -8,7 +8,7 @@ const rsync = require('rsyncwrapper');
 const config = require('../config.js');
 
 // require creds
-const creds =  require('../../secrets.json');
+const creds =  require('/Users/samatkins/projects/info/secrets.json');
 
 // run dist in local server
 gulp.task('serve:dist', function() {
