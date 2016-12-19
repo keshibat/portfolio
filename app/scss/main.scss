@@ -226,3 +226,76 @@ a.project__url {
   background-color: #FFFFFF;
 }
 
+/* ==========================================================================
+  About Section
+========================================================================== */
+
+.about__section {
+  margin: 50px auto 0 auto;
+  width: 65%;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 5px;
+  .about__header {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  /* for testing only */
+  // border:1px solid black;
+}
+
+.about__wrapper {
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+}
+
+.about__front  {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding-left: 35px;
+  flex: 1;
+  h2 {
+    font-size: 25px;
+  }
+  /* for testing only */
+  // border:1px solid blue;
+}
+
+.about__back {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding-left: 35px;
+  flex:1;
+  h2 {
+    font-size: 25px;
+  }
+  /* for testing only */
+  // border:1px solid blue;
+}
+
+.about__tools {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding-left: 35px;
+  flex:1;
+  h2 {
+    font-size: 25px;
+  }
+  /* for testing only */
+  // border:1px solid blue;
+}
+
