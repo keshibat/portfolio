@@ -3,10 +3,11 @@
     height: 48px;
     margin-right: 0.5em;
   }
-  .header__title {
-    margin-left: 0;
-    font-size: 2em;
-    vertical-align: bottom; 
+  h1.header__title {
+    // margin-left: 0;
+    // font-size: 1.2em;
+    // vertical-align: bottom; 
+    display: none;
   }
   .nav {
     z-index: 10;
