@@ -26,7 +26,7 @@ gulp.task('rsync', function() {
 	rsync({
 		src: 'dist/',
 		// keep dest in secrets.json
-		dest: creds.dest,
+		dest: creds.samat.dest,
 		ssh: true,
 		recursive: true,
 		deleteAll: true
