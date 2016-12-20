@@ -26,14 +26,14 @@
 
           picture.insertBefore(source, picture.firstElementChild);
           setTimeout(function() {
-           picture.removeChild(source);
+            picture.removeChild(source);
           });
         } else if (!img._pfLastSize || img.offsetWidth > img._pfLastSize) {
           img._pfLastSize = img.offsetWidth;
           sizes = img.sizes;
           img.sizes += ',100vw';
           setTimeout(function() {
-           img.sizes = sizes;
+            img.sizes = sizes;
           });
         }
       };
@@ -233,7 +233,7 @@
         } else {
           /*jshint evil:true */
           try {
-           cssCache[css] = new Function('e', buildStr(css))(units);
+            cssCache[css] = new Function('e', buildStr(css))(units);
           } catch (e) {}
           /*jshint evil:false */
         }
@@ -623,44 +623,44 @@
           // descriptors and let current descriptor be the empty string.
           // Set state to after descriptor.
           if (isSpace(c)) {
-           if (currentDescriptor) {
-            descriptors.push(currentDescriptor);
-            currentDescriptor = '';
-            state = 'after descriptor';
-           }
+            if (currentDescriptor) {
+              descriptors.push(currentDescriptor);
+              currentDescriptor = '';
+              state = 'after descriptor';
+            }
 
-          // U+002C COMMA (,)
-          // Advance position to the next character in input. If current descriptor
-          // is not empty, append current descriptor to descriptors. Jump to the step
+            // U+002C COMMA (,)
+            // Advance position to the next character in input. If current descriptor
+            // is not empty, append current descriptor to descriptors. Jump to the step
           // labeled descriptor parser.
           } else if (c === ',') {
-           pos += 1;
-           if (currentDescriptor) {
-            descriptors.push(currentDescriptor);
-           }
-           parseDescriptors();
-           return;
+            pos += 1;
+            if (currentDescriptor) {
+              descriptors.push(currentDescriptor);
+            }
+            parseDescriptors();
+            return;
 
-          // U+0028 LEFT PARENTHESIS (()
+            // U+0028 LEFT PARENTHESIS (()
           // Append c to current descriptor. Set state to in parens.
           } else if (c === '\u0028') {
-           currentDescriptor = currentDescriptor + c;
-           state = 'in parens';
+            currentDescriptor = currentDescriptor + c;
+            state = 'in parens';
 
-          // EOF
-          // If current descriptor is not empty, append current descriptor to
+            // EOF
+            // If current descriptor is not empty, append current descriptor to
           // descriptors. Jump to the step labeled descriptor parser.
           } else if (c === '') {
-           if (currentDescriptor) {
-            descriptors.push(currentDescriptor);
-           }
-           parseDescriptors();
-           return;
+            if (currentDescriptor) {
+              descriptors.push(currentDescriptor);
+            }
+            parseDescriptors();
+            return;
 
-          // Anything else
+            // Anything else
           // Append c to current descriptor.
           } else {
-           currentDescriptor = currentDescriptor + c;
+            currentDescriptor = currentDescriptor + c;
           }
           // (end "in descriptor"
 
@@ -670,21 +670,21 @@
           // U+0029 RIGHT PARENTHESIS ())
           // Append c to current descriptor. Set state to in descriptor.
           if (c === ')') {
-           currentDescriptor = currentDescriptor + c;
-           state = 'in descriptor';
+            currentDescriptor = currentDescriptor + c;
+            state = 'in descriptor';
 
-          // EOF
-          // Append current descriptor to descriptors. Jump to the step labeled
+            // EOF
+            // Append current descriptor to descriptors. Jump to the step labeled
           // descriptor parser.
           } else if (c === '') {
-           descriptors.push(currentDescriptor);
-           parseDescriptors();
-           return;
+            descriptors.push(currentDescriptor);
+            parseDescriptors();
+            return;
 
-          // Anything else
+            // Anything else
           // Append c to current descriptor.
           } else {
-           currentDescriptor = currentDescriptor + c;
+            currentDescriptor = currentDescriptor + c;
           }
 
         // After descriptor
@@ -696,14 +696,14 @@
 
           // EOF: Jump to the step labeled descriptor parser.
           } else if (c === '') {
-           parseDescriptors();
-           return;
+            parseDescriptors();
+            return;
 
-          // Anything else
+            // Anything else
           // Set state to in descriptor. Set position to the previous character in input.
           } else {
-           state = 'in descriptor';
-           pos -= 1;
+            state = 'in descriptor';
+            pos -= 1;
 
           }
         }
@@ -840,28 +840,28 @@
           return listArray;
         } else if (inComment) {
           if ((chrctr === '*') && (str[pos + 1] === '/')) { // (At end of a comment.)
-           inComment = false;
-           pos += 2;
-           pushComponent();
-           continue;
+            inComment = false;
+            pos += 2;
+            pushComponent();
+            continue;
           } else {
-           pos += 1; // (Skip all characters inside comments.)
-           continue;
+            pos += 1; // (Skip all characters inside comments.)
+            continue;
           }
         } else if (isSpace(chrctr)) {
           // (If previous character in loop was also a space, or if
           // at the beginning of the string, do not add space char to
           // component.)
           if ((str.charAt(pos - 1) && isSpace(str.charAt(pos - 1))) || !component) {
-           pos += 1;
-           continue;
+            pos += 1;
+            continue;
           } else if (parenDepth === 0) {
-           pushComponent();
-           pos += 1;
-           continue;
+            pushComponent();
+            pos += 1;
+            continue;
           } else {
-           // (Replace any space character with a plain space for legibility.)
-           chrctr = ' ';
+            // (Replace any space character with a plain space for legibility.)
+            chrctr = ' ';
           }
         } else if (chrctr === '(') {
           parenDepth += 1;
@@ -1252,10 +1252,10 @@
            (abortCurSrc || curSrc !== pf.makeUrl(candidate.url)) &&
            chooseLowRes(candidates[ j ].res, candidate.res, dpr, candidates[ j ].cached)) {
 
-           bestCandidate = candidates[ j ];
+            bestCandidate = candidates[ j ];
 
           } else {
-           bestCandidate = candidate;
+            bestCandidate = candidate;
           }
           break;
         }
@@ -1452,7 +1452,7 @@
           pf.fillImgs();
           isDomReady = isDomReady || regReady.test(readyState);
           if (isDomReady) {
-           clearTimeout(timerId);
+            clearTimeout(timerId);
           }
 
         }
@@ -1468,10 +1468,10 @@
           var last = (new Date()) - timestamp;
 
           if (last < wait) {
-           timeout = setTimeout(later, wait - last);
+            timeout = setTimeout(later, wait - last);
           } else {
-           timeout = null;
-           func();
+            timeout = null;
+            func();
           }
         };
 
@@ -1479,7 +1479,7 @@
           timestamp = new Date();
 
           if (!timeout) {
-           timeout = setTimeout(later, wait);
+            timeout = setTimeout(later, wait);
           }
         };
       };
