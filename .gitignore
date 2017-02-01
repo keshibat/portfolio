@@ -23,4 +23,4 @@ app/images_src
 app/responsive
 
 # ignore creds
-secrets.json
+creds.js
