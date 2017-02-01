@@ -1,0 +1,27 @@
+        <!-- Portfolio section start -->
+        <section id="portfolio">
+        <div class="portfolio__section">
+          <div class="portfolio__title">
+            <h2 class="portfolio__header">Portfolio</h2>
+            <h3 class="portfolio__subheader">A selection of my  projects</h3>
+          </div>
+
+          <div class="portfolio__wrapper">
+            {% for image in images %}
+              <div class="project__wrapper">
+              <img class="project__img" src="{{image.src}}" alt="{{image.alt}}">
+              <div class="project__title"><h4>{{image.title}}</h4></div>
+              <div class="project__links">
+                      
+              <a class="project__url" href="{{image.demo_url}}" target="_blank">
+              <i class="fa fa-link"> View Demo</i>
+              </a>
+              <a class="project__url" href="{{image.source_url}}" target="_blank">
+              <i class="fa fa-code"> View Source</i>
+              </a>
+              </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        </section>
