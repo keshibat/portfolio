@@ -1,12 +1,21 @@
 {
     "images": [{
-        "src": "image-one.png",
-        "alt": "Image one alt text"
+        "src": "images/wikipediaViewer_medium.png",
+        "alt": "Free Code Camp - Wikipedia Viewer App",
+        "title": "Wikipedia Viewer App",
+        "demo_url": "http://fccwikipediaviewer.surge.sh/",
+        "source_url": "https://github.com/cubiio/fccfe-wikipediaViewer"
     }, {
-        "src": "image-two.png",
-        "alt": "Image two alt text"
+        "src": "images/localWeather_medium.png",
+        "alt": "Free Code Camp - Local Weather App",
+        "title": "Local Weather App",
+        "demo_url": "http://local-weather-fcc.surge.sh/",
+        "source_url": "https://github.com/cubiio/fccfe-localWeather"
     }, {
-        "src": "image-three.png",
-        "alt": "Image three alt text"
+        "src": "images/randomQuote_medium.png",
+        "alt": "Free Code Camp - Random Quotes App",
+        "title": "Random Quotes App",
+        "demo_url": "https://cubiio.github.io/fccfe-randomQuoteGenerator/",
+        "source_url": "https://github.com/cubiio/fccfe-randomQuoteGenerator"
     }]
 }
