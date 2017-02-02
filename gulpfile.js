@@ -23,7 +23,7 @@ const fs = require('fs')
 const config = require('./config.js');
 
 // require creds
-const creds =  require('/Users/samatkins/projects/info/secrets.json');
+// const creds =  require('/Users/samatkins/projects/info/secrets.json');
 
 
 /* ==========================================================================
@@ -35,7 +35,13 @@ const creds =  require('/Users/samatkins/projects/info/secrets.json');
 gulp.task('default', function(callback) {
     runSequence(
         'clean:dev', 
-        ['sprites', 'lint:js', 'lint:scss'],
+        
+        // toggle: lint ON
+        // ['sprites', 'lint:js', 'lint:scss'],
+        
+        // toggle: lint OFF
+        ['sprites'],
+
         ['sass', 'nunjucks', 'images'],
         ['browserSync', 'watch'],
         callback
@@ -127,7 +133,7 @@ gulp.task('browserSync', function() {
         server: {
             baseDir: 'app'
         },
-        browser: 'google chrome',
+        browser: 'google chrome canary',
         notify: false
     })
 })
@@ -140,8 +146,8 @@ gulp.task('watch', function() {
         'app/pages/**/*.+(html|njk)',
         'app/data.json'
         ], ['nunjucks'])
-    gulp.watch(config.sass.src, ['sass', 'lint:scss']);
-    gulp.watch(config.js.src, ['watch-js']);
+    gulp.watch(config.sass.src, ['sass']);
+    // gulp.watch(config.js.src, ['watch-js']);
     // add to config 
     gulp.watch(config.html.src, browserSync.reload);
 });
@@ -359,6 +365,14 @@ gulp.task('lint:js', function() {
     .pipe(gulp.dest(config.jscs.dest))
 });
 
+
+// combined linter
+gulp.task('lint', function(callback) {
+    runSequence(
+        ['lint:js', 'lint:scss'],
+        callback
+        );
+});
 
 /* ==========================================================================
     fonts
