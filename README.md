@@ -1,25 +1,21 @@
-# Udacity Fullstack Nanodegree: Portfolio Project
+# My Web Development Portfolio
 
 ## Project Info
-Build a project portfolio based on the mock-up provided. 
-The site must follow HTML and CSS guidelines.
+Originally built as part of my Udacity Fullstack Nanodegree, this is the source code for my portfolio site.
 
-## Status
-*Completed*
+The requirement was to build a project portfolio based on the mock-up provided, and the site must follow HTML and CSS guidelines.
+
+## Website
+My portfolio is live at [samatkins.me](http://samatkins.me/).
 
 ## Source Code
 Source code is located in the [app](https://github.com/cubiio/portfolio/tree/master/app) folder.
 
 ## Built with 
 - HTML5
+- Nunjucks templates
 - Sass
 - CSS3 Flexbox
 - Javascript
+- Knockout.js
 - Gulp to automate tasks
-
-## Demo 
-For the purposes of the Udacity project, a demo is live [here](http://cubiio-portfolio.surge.sh/) hosted by [surge.sh](https://surge.sh/).
-
-## Website
-My portfolio is live at [samatkins.me](http://samatkins.me/).
-
