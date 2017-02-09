@@ -79,8 +79,11 @@ var ViewModel = function() {
         self.toggleModal(false);
     };
 
+    // Used to toggle CSS class '.open' - false means '.open'
+    // is not applied to the nav element. 
     this.toggleDrawer = ko.observable(false);
 
+    // Sets CSS class '.open' to true if false and vice versa.
     this.openDrawer = function() {
         // console.log("hamburgers!")
         self.toggleDrawer( !self.toggleDrawer() );
