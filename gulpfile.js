@@ -23,7 +23,7 @@ const fs = require('fs')
 const config = require('./config.js');
 
 // require creds
-// const creds =  require('/Users/samatkins/projects/info/secrets.json');
+const creds =  require('/Users/samatkins/projects/info/secrets.json');
 
 
 /* ==========================================================================
