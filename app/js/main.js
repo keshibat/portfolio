@@ -70,24 +70,32 @@ var Portfolio = function(data) {
 
 var ViewModel = function() {
 
+    // Point to access the outer 'this' i.e. from ViewModel.
     var self = this;
 
+    // Create an empty observableArray.
     this.portfolioModalList = ko.observableArray( [] );
 
+    // From portfolioModals push to the observableArray.
     portfolioModals.forEach(function(modalItem) {
         self.portfolioModalList.push( new Portfolio(modalItem) );
     });
 
+    // Sets the currentModal to the default of zero indexed item.
     this.currentModal = ko.observable( this.portfolioModalList()[0] );
 
+    // Used with data bind 'visible'. False means hidden.
     this.toggleModal = ko.observable(false);
 
+    // Sets the clickedModal to the currentModal for render,
+    // and toggles 'visible' to true i.e. to visible.
     this.selectModal = function(clickedModal) {
         console.log('you clicked on a modal');
         self.currentModal(clickedModal);
         self.toggleModal(true);
     };
 
+    // Toggles the 'visible' data-bind to false i.e. hidden.
     this.closeModal = function() {
         console.log('you closed the modal!')
         self.toggleModal(false);
