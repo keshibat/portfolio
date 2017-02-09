@@ -80,8 +80,12 @@ var ViewModel = function() {
 
     this.currentModal = ko.observable( this.portfolioModalList()[0] );
 
+    this.toggleModal = ko.observable(false);
+
     this.selectModal = function(clickedModal) {
+        console.log('you clicked on a modal');
         self.currentModal(clickedModal);
+        self.toggleModal(true);
     }
 
 }

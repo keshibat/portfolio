@@ -52,7 +52,7 @@
 				</section>
 
 				<!-- Modal start -->
-				<div data-bind="with:currentModal">
+				<div data-bind="with:currentModal, visible: toggleModal">
 					<h2 data-bind="text: portfolioTitle"></h2>
 					<img class="project__img" src="" data-bind="attr: {src: portfolioImage}">
 				</div>
