@@ -86,7 +86,12 @@ var ViewModel = function() {
         console.log('you clicked on a modal');
         self.currentModal(clickedModal);
         self.toggleModal(true);
-    }
+    };
+
+    this.closeModal = function() {
+        console.log('you closed the modal!')
+        self.toggleModal(false);
+    };
 
 }
 
