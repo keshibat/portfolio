@@ -33,35 +33,35 @@ var portfolioModals = [
         portfolioTitle: "Blog App",
         portfolioDemoURL: "https://cubiio-blog.appspot.com/",
         portfolioSourceURL: "https://github.com/cubiio/fsnd-blog",
-        portfolioSummary: "This is a placeholder summary for my Blog App."
+        portfolioSummary: "Built with Python, Google App Engine, and Jinja2. Functionality includes user access controls with signup, login and logout, and password hashing. CRUD local permission systems for posts, comments and likes."
     }, {
         portfolioImage: "images/item_catalog_medium.png",
         portfolioAlt: "Udacity - Item Catalogue App",
         portfolioTitle: "Item Catalogue App",
         portfolioDemoURL: "https://github.com/cubiio/fsnd-item_catalog",
         portfolioSourceURL: "https://github.com/cubiio/fsnd-item_catalog",
-        portfolioSummary: "This is a placeholder summary for my Catalogue App."
+        portfolioSummary: "Built with Python Flask, SQLAlchemy, Jinja2 and Bootstrap. Functionality includes OAuth v2.0 integration for Google accounts, and CRUD with CSRF protection for entries and local permission systems."
     }, {
         portfolioImage: "images/wikipediaViewer_medium.png",
         portfolioAlt: "Free Code Camp - Wikipedia Viewer App",
         portfolioTitle: "Wikipedia Viewer App",
         portfolioDemoURL: "http://fccwikipediaviewer.surge.sh/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-wikipediaViewer",
-        portfolioSummary: "This is a placeholder summary for my Wikipedia Viewer App."
+        portfolioSummary: "Built with Javascript, HTML and CSS. Based on user input a call is made to Wikipedia API and search results displayed in the app."
     }, {
         portfolioImage: "images/localWeather_medium.png",
         portfolioAlt: "Free Code Camp - Local Weather App",
         portfolioTitle: "Local Weather App",
         portfolioDemoURL: "http://local-weather-fcc.surge.sh/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-localWeather",
-        portfolioSummary: "This is a placeholder summary for my Local Weather App."
+        portfolioSummary: "Built with Javascript and jQuery. An API call to DarkSky returns weather local to the user."
     }, {
         portfolioImage: "images/randomQuote_medium.png",
         portfolioAlt: "Free Code Camp - Random Quotes App",
         portfolioTitle: "Random Quotes App",
         portfolioDemoURL: "https://cubiio.github.io/fccfe-randomQuoteGenerator/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-randomQuoteGenerator",
-        portfolioSummary: "This is a placeholder summary for my Random Quote Generator App."
+        portfolioSummary: "Buit with Javascript, this app displays a random quote. The user may Tweet the random quote via a Tweet button."
     }
 ]
 
