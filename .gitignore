@@ -18,6 +18,7 @@ jspm_packages
 # ignore generated files and folders
 dist
 app/css
+app/index.html
 *.css
 
 # ignore source and processing images
