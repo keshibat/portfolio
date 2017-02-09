@@ -78,6 +78,12 @@ var ViewModel = function() {
         self.portfolioModalList.push( new Portfolio(modalItem) );
     });
 
+    this.currentModal = ko.observable( this.portfolioModalList()[0] );
+
+    this.selectModal = function(clickedModal) {
+        self.currentModal(clickedModal);
+    }
+
 }
 
 ko.applyBindings(new ViewModel());
