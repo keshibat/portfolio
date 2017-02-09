@@ -39,10 +39,10 @@
 									<img class="project__img" src="" data-bind="click: $parent.selectModal, attr: {src: portfolioImage}">
 									<div class="project__title" data-bind="text: portfolioTitle"><h4> </h4></div>
 									<div class="project__links">
-										<a class="project__url" data-bind="attr: { href: portfolioDemoURL}">
+										<a class="project__url" data-bind="attr: { href: portfolioDemoURL}" target="_blank">
 									    <i class="fa fa-link"> View Demo</i>
 										</a>
-										<a class="project__url" data-bind="attr: { href: portfolioSourceURL}">
+										<a class="project__url" data-bind="attr: { href: portfolioSourceURL}" target="_blank">
 											<i class="fa fa-code"> View Source</i>
 										</a>
 									</div>
@@ -52,8 +52,39 @@
 				</section>
 
 				<!-- Modal start -->
-				<div data-bind="with:currentModal, visible: toggleModal">
-					<h2 data-bind="text: portfolioTitle"></h2>
-					<img class="project__img" src="" data-bind="attr: {src: portfolioImage}">
-					<p data-bind="click: $parent.closeModal">Close the modal!</p>
+				<div class="modal" data-bind="with:currentModal, visible: toggleModal">
+
+					<span class="close" data-bind="click: $parent.closeModal">&times;</span>
+					
+					<img class="modal-content" class="project__img" src="" data-bind="attr: {src: portfolioImage}">
+					<div id="summary" class="modal_summary">
+						<h2 data-bind="text: portfolioTitle"></h2>
+
+						<p data-bind="text: portfolioSummary"> </p>
+
+						<div class="project__links">
+							<a class="project_url" data-bind="attr: { href: portfolioDemoURL}" target="_blank">
+						    <i class="fa fa-link"> View Demo</i>
+							</a>
+							<a class="project_url" data-bind="attr: { href: portfolioSourceURL}" target="_blank">
+								<i class="fa fa-code"> View Source</i>
+							</a>
+						</div>
+
+					</div>
+
 				</div>
+
+
+
+{# 				<div class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img_01" src="images/item_catalog_medium.png">
+				  <div id="summary" class="modal_summary">
+				    <h3>Item Catalogue</h3> 
+				    <p>This is a summary</p>
+				    <a class="project_url" href="https://github.com/cubiio/fsnd-item_catalog" target="_blank"><i class="fa fa-code"> View Source</i></a>
+				  </div>
+				</div>
+ #}
+

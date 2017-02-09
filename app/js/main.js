@@ -32,31 +32,36 @@ var portfolioModals = [
         portfolioAlt: "Udacity - Blog App",
         portfolioTitle: "Blog App",
         portfolioDemoURL: "https://cubiio-blog.appspot.com/",
-        portfolioSourceURL: "https://github.com/cubiio/fsnd-blog"
+        portfolioSourceURL: "https://github.com/cubiio/fsnd-blog",
+        portfolioSummary: "This is a placeholder summary for my Blog App."
     }, {
         portfolioImage: "images/item_catalog_medium.png",
         portfolioAlt: "Udacity - Item Catalogue App",
         portfolioTitle: "Item Catalogue App",
         portfolioDemoURL: "https://github.com/cubiio/fsnd-item_catalog",
-        portfolioSourceURL: "https://github.com/cubiio/fsnd-item_catalog"
+        portfolioSourceURL: "https://github.com/cubiio/fsnd-item_catalog",
+        portfolioSummary: "This is a placeholder summary for my Catalogue App."
     }, {
         portfolioImage: "images/wikipediaViewer_medium.png",
         portfolioAlt: "Free Code Camp - Wikipedia Viewer App",
         portfolioTitle: "Wikipedia Viewer App",
         portfolioDemoURL: "http://fccwikipediaviewer.surge.sh/",
-        portfolioSourceURL: "https://github.com/cubiio/fccfe-wikipediaViewer"
+        portfolioSourceURL: "https://github.com/cubiio/fccfe-wikipediaViewer",
+        portfolioSummary: "This is a placeholder summary for my Wikipedia Viewer App."
     }, {
         portfolioImage: "images/localWeather_medium.png",
         portfolioAlt: "Free Code Camp - Local Weather App",
         portfolioTitle: "Local Weather App",
         portfolioDemoURL: "http://local-weather-fcc.surge.sh/",
-        portfolioSourceURL: "https://github.com/cubiio/fccfe-localWeather"
+        portfolioSourceURL: "https://github.com/cubiio/fccfe-localWeather",
+        portfolioSummary: "This is a placeholder summary for my Local Weather App."
     }, {
         portfolioImage: "images/randomQuote_medium.png",
         portfolioAlt: "Free Code Camp - Random Quotes App",
         portfolioTitle: "Random Quotes App",
         portfolioDemoURL: "https://cubiio.github.io/fccfe-randomQuoteGenerator/",
-        portfolioSourceURL: "https://github.com/cubiio/fccfe-randomQuoteGenerator"
+        portfolioSourceURL: "https://github.com/cubiio/fccfe-randomQuoteGenerator",
+        portfolioSummary: "This is a placeholder summary for my Random Quote Generator App."
     }
 ]
 
@@ -66,11 +71,12 @@ var Portfolio = function(data) {
     this.portfolioTitle = ko.observable(data.portfolioTitle);
     this.portfolioDemoURL = ko.observable(data.portfolioDemoURL);
     this.portfolioSourceURL = ko.observable(data.portfolioSourceURL);
+    this.portfolioSummary = ko.observable(data.portfolioSummary);
 }
 
 var ViewModel = function() {
 
-    // Point to access the outer 'this' i.e. from ViewModel.
+    // Pointer to access the outer 'this' i.e. from ViewModel.
     var self = this;
 
     // Create an empty observableArray.
