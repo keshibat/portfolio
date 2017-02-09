@@ -41,13 +41,13 @@
             <h1 class="header__title">
               Sam Atkins - Full Stack Web Developer
             </h1>
-            <a id="menu" class="header__menu">
-              <i class="fa fa-bars"></i>
+            <a  class="header__menu">
+              <i data-bind="click: openDrawer" class="fa fa-bars"></i>
             </a>
           </div>
         </header>
 
-        <nav id="drawer" class="nav">
+        <nav data-bind="css: { open: toggleDrawer() == true }" class="nav">
           <ul class="nav__list">
             <li class="nav__item"><a href="#portfolio">Portfolio</a></li>
             <li class="nav__item"><a href="#about">About</a></li>
@@ -73,89 +73,50 @@
             </div>
         </section>
 
-        <!-- Portfolio section start -->
-        <section id="portfolio">
-        <div class="portfolio__section">
-          <div class="portfolio__title">
-            <h2 class="portfolio__header">Portfolio</h2>
-            <h3 class="portfolio__subheader">A selection of my  projects</h3>
-          </div>
+				<!-- Portfolio section with Modals start -->
+				<section id="portfolio">
+				<div class="portfolio__section">
+					<div class="portfolio__title">
+						<h2 class="portfolio__header">Portfolio</h2>
+						<h3 class="portfolio__subheader">A selection of my  projects</h3>
+					</div>
+					
+					<div class="portfolio__wrapper" data-bind="foreach: portfolioModalList">
+						<div class="project__wrapper" data-bind="click: $parent.selectModal">
+							<img class="project__img" src="" data-bind="attr: {src: portfolioImage}">
+							<div class="project__title" data-bind="text: portfolioTitle"><h4> </h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				</section>
 
-          <div class="portfolio__wrapper">
-            
-              <div class="project__wrapper">
-              <img class="project__img" src="images/python_blog_medium.png" alt="Udacity - Blog App">
-              <div class="project__title"><h4>Blog App</h4></div>
-              <div class="project__links">
-                      
-              <a class="project__url" href="https://cubiio-blog.appspot.com/" target="_blank">
-              <i class="fa fa-link"> View Demo</i>
-              </a>
-              <a class="project__url" href="https://github.com/cubiio/fsnd-blog" target="_blank">
-              <i class="fa fa-code"> View Source</i>
-              </a>
-              </div>
-              </div>
-            
-              <div class="project__wrapper">
-              <img class="project__img" src="images/item_catalog_medium.png" alt="Udacity - Item Catalogue App">
-              <div class="project__title"><h4>Item Catalogue App</h4></div>
-              <div class="project__links">
-                      
-              <a class="project__url" href="https://github.com/cubiio/fsnd-item_catalog" target="_blank">
-              <i class="fa fa-link"> View Demo</i>
-              </a>
-              <a class="project__url" href="https://github.com/cubiio/fsnd-item_catalog" target="_blank">
-              <i class="fa fa-code"> View Source</i>
-              </a>
-              </div>
-              </div>
-            
-              <div class="project__wrapper">
-              <img class="project__img" src="images/wikipediaViewer_medium.png" alt="Free Code Camp - Wikipedia Viewer App">
-              <div class="project__title"><h4>Wikipedia Viewer App</h4></div>
-              <div class="project__links">
-                      
-              <a class="project__url" href="http://fccwikipediaviewer.surge.sh/" target="_blank">
-              <i class="fa fa-link"> View Demo</i>
-              </a>
-              <a class="project__url" href="https://github.com/cubiio/fccfe-wikipediaViewer" target="_blank">
-              <i class="fa fa-code"> View Source</i>
-              </a>
-              </div>
-              </div>
-            
-              <div class="project__wrapper">
-              <img class="project__img" src="images/localWeather_medium.png" alt="Free Code Camp - Local Weather App">
-              <div class="project__title"><h4>Local Weather App</h4></div>
-              <div class="project__links">
-                      
-              <a class="project__url" href="http://local-weather-fcc.surge.sh/" target="_blank">
-              <i class="fa fa-link"> View Demo</i>
-              </a>
-              <a class="project__url" href="https://github.com/cubiio/fccfe-localWeather" target="_blank">
-              <i class="fa fa-code"> View Source</i>
-              </a>
-              </div>
-              </div>
-            
-              <div class="project__wrapper">
-              <img class="project__img" src="images/randomQuote_medium.png" alt="Free Code Camp - Random Quotes App">
-              <div class="project__title"><h4>Random Quotes App</h4></div>
-              <div class="project__links">
-                      
-              <a class="project__url" href="https://cubiio.github.io/fccfe-randomQuoteGenerator/" target="_blank">
-              <i class="fa fa-link"> View Demo</i>
-              </a>
-              <a class="project__url" href="https://github.com/cubiio/fccfe-randomQuoteGenerator" target="_blank">
-              <i class="fa fa-code"> View Source</i>
-              </a>
-              </div>
-              </div>
-            
-          </div>
-        </div>
-        </section>
+				<!-- Modal start -->
+				<div class="modal" data-bind="with:currentModal, visible: toggleModal, event: { keypress: closeModal }">
+
+					<span class="close" data-bind="click: $parent.closeModal">&times;</span>
+					
+					<img class="modal-content" class="project__img" src="" data-bind="attr: {src: portfolioImage}">
+					<div id="summary" class="modal_summary">
+						<h2 data-bind="text: portfolioTitle"></h2>
+
+						<p data-bind="text: portfolioSummary"> </p>
+
+						<div class="project__links">
+							<a class="project_url" data-bind="attr: { href: portfolioDemoURL}" target="_blank">
+						    <i class="fa fa-link"> View Demo</i>
+							</a>
+							<a class="project_url" data-bind="attr: { href: portfolioSourceURL}" target="_blank">
+								<i class="fa fa-code"> View Source</i>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
 
         <!-- About section start -->
         <section id="about">
@@ -169,7 +130,7 @@
                   <ul>
                       <li>HTML5; Jinja2; Nunjucks</li>
                       <li>CSS3 & FlexBox; Sass</li>
-                      <li>Javascript; jQuery</li>
+                      <li>Javascript; jQuery; Knockout.js</li>
                   </ul>
               </div>
               <div class="about__back">
@@ -225,6 +186,7 @@
 
     <!-- build:js js/main.concat.js -->
     <script src="js/vendor/plugins.js"></script>
+    <script type='text/javascript' src='js/lib/knockout-3.4.1.js'>></script>
     <script src="js/main.js"></script>
     <!-- endbuild -->
 
