@@ -96,15 +96,22 @@ var ViewModel = function() {
     // Sets the clickedModal to the currentModal for render,
     // and toggles 'visible' to true i.e. to visible.
     this.selectModal = function(clickedModal) {
-        console.log('you clicked on a modal');
+        // console.log('you clicked on a modal');
         self.currentModal(clickedModal);
         self.toggleModal(true);
     };
 
     // Toggles the 'visible' data-bind to false i.e. hidden.
     this.closeModal = function() {
-        console.log('you closed the modal!')
+        // console.log('you closed the modal!')
         self.toggleModal(false);
+    };
+
+    this.toggleDrawer = ko.observable(false);
+
+    this.openDrawer = function() {
+        // console.log("hamburgers!")
+        self.toggleDrawer( !self.toggleDrawer() );
     };
 
 }

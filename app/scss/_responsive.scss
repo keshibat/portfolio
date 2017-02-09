@@ -1,68 +1,68 @@
 // _responsive.scss
 
 /* ==========================================================================
-  Phones
+	Phones
 ========================================================================== */
 
 @media screen and (max-width: 549px) {
 
-  .header__logo {
-    height: 48px;
-    margin-right: 0.5em;
-  }
+	.header__logo {
+		height: 48px;
+		margin-right: 0.5em;
+	}
 
-  .header__title {
-    margin-left: 0.1em;
-    margin-top: 2em;
-    font-size: 1em;
-    word-wrap: break-word;
-    width: 40%;
-  }
+	.header__title {
+		margin-left: 0.1em;
+		margin-top: 2em;
+		font-size: 1em;
+		word-wrap: break-word;
+		width: 40%;
+	}
 
-  .nav {
-    z-index: 10;
-    background-color: #fff;
-    width: 300px;
-    position: absolute;
-    /* This transform moves the drawer off canvas. */
-    -webkit-transform: translate(-500px, 0);
-    transform: translate(-500px, 0);
-    /* Optionally, we animate the drawer. */
-    transition: transform 0.3s ease;
-  }
+	.nav {
+		z-index: 10;
+		background-color: #fff;
+		width: 300px;
+		position: absolute;
+		/* This transform moves the drawer off canvas. */
+		-webkit-transform: translate(-550px, 0);
+		transform: translate(-550px, 0);
+		/* Optionally, we animate the drawer. */
+		transition: transform 0.3s ease;
+	}
 
-  .nav.open {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
+	.nav.open {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
 
-  .nav__item {
-    display: list-item;
-    border-bottom: 1px solid #e0e0e0;
-    width: 100%;
-    text-align: left;
-    background-color: #fafafa;
-  }
+	.nav__item {
+		display: list-item;
+		border-bottom: 1px solid #e0e0e0;
+		width: 100%;
+		text-align: left;
+		background-color: #fafafa;
+	}
 
-  .header__menu {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    padding: 1em;
-  }
+	.header__menu {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		padding: 1em;
+	}
 
-  .header__menu svg {
-    width: 32px;
-    fill: #e0e0e0;
-  }
+	.header__menu svg {
+		width: 32px;
+		fill: #e0e0e0;
+	}
 
-  .hero__img {
-    overflow: hidden;
-  }
+	.hero__img {
+		overflow: hidden;
+	}
 
-  .contact__logos .social {
-    margin-right: 4px;
-  }
+	.contact__logos .social {
+		margin-right: 4px;
+	}
 }
 
 /* ==========================================================================
@@ -71,76 +71,76 @@ for large phones
 
 @media only screen and (min-width: 550px) {
 
-  .header__menu {
-    display: none !important;
-  }
+	.header__menu {
+		display: none !important;
+	}
 
-  .header__title {
-    margin-left: 0.5em;
-    font-size: 1.7em;
-    vertical-align: bottom; 
-  }
+	.header__title {
+		margin-left: 0.5em;
+		font-size: 1.7em;
+		vertical-align: bottom; 
+	}
 
-  .project__wrapper {
-    margin-bottom: 10px;
-  }
+	.project__wrapper {
+		margin-bottom: 10px;
+	}
 }
 
 /* ==========================================================================
-  for tablets
+	for tablets
 ========================================================================== */
 
 @media screen and (min-width: 750px) {
 
-  .header__title {
-    margin-left: 1.5em;
-    font-size: 2em;
-  }
+	.header__title {
+		margin-left: 1.5em;
+		font-size: 2em;
+	}
 
-  .about__wrapper {
-    flex-direction: row !important;
-  }
+	.about__wrapper {
+		flex-direction: row !important;
+	}
 }
 
 /* ==========================================================================
-  for laptops and large screens
+	for laptops and large screens
 ========================================================================== */
 @media only screen and (min-width: 1000px) {
-  
-  .header__title {
-    margin-left: 2em;
-    font-size: 2.5em;
-  }
+	
+	.header__title {
+		margin-left: 2em;
+		font-size: 2.5em;
+	}
 
-  .contact__logos .social:first-child {
-    padding-left: 30px;
-  }
+	.contact__logos .social:first-child {
+		padding-left: 30px;
+	}
 
-  .project__wrapper {
-    margin-right: 10px;
-  }
+	.project__wrapper {
+		margin-right: 10px;
+	}
 
 }
 
 /* ==========================================================================
-  for super large screens - lucky you
+	for super large screens - lucky you
 ========================================================================== */
 @media only screen and (min-width: 1700px) {
-  .header {
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	.header {
+		max-width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  .nav {
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	.nav {
+		max-width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  .hero__wrapper {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	.hero__wrapper {
+		max-width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
