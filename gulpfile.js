@@ -76,9 +76,9 @@ gulp.task('nunjucks', function() {
  return gulp.src('app/templates/pages/**/*.+(html|njk)')
  .pipe(customPlumber('Error Running Nunjucks'))
  // adding data to Nunjucks parsed to JSON so watchable
- .pipe(data(function() {
-    return JSON.parse(fs.readFileSync('./app/templates/njk_data.json'))
- }))
+ // .pipe(data(function() {
+ //    return JSON.parse(fs.readFileSync('./app/templates/njk_data.json'))
+ // }))
  // renders nunjuck files
  .pipe(nunjucksRender({
      path: ['app/templates/']
