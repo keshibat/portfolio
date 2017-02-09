@@ -1,3 +1,9 @@
+/* jshint undef: true, unused: true */
+/* globals ko */
+
+// use strict
+"use strict";
+
 var portfolioModals = [
     {
         portfolioImage: "images/python_blog_medium.png",
@@ -35,7 +41,7 @@ var portfolioModals = [
         portfolioSourceURL: "https://github.com/cubiio/fccfe-randomQuoteGenerator",
         portfolioSummary: "Buit with Javascript, this app displays a random quote. The user may Tweet the random quote via a Tweet button."
     }
-]
+];
 
 var Portfolio = function(data) {
     this.portfolioImage = ko.observable(data.portfolioImage);
@@ -44,7 +50,7 @@ var Portfolio = function(data) {
     this.portfolioDemoURL = ko.observable(data.portfolioDemoURL);
     this.portfolioSourceURL = ko.observable(data.portfolioSourceURL);
     this.portfolioSummary = ko.observable(data.portfolioSummary);
-}
+};
 
 var ViewModel = function() {
 
@@ -89,6 +95,6 @@ var ViewModel = function() {
         self.toggleDrawer( !self.toggleDrawer() );
     };
 
-}
+};
 
 ko.applyBindings(new ViewModel());
