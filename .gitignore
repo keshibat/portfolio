@@ -4,6 +4,7 @@ profile
 
 # ignore sass caches
 .sass-cache
+*.css.map
 
 # ignore sublime projects
 .sublime-project
@@ -16,6 +17,7 @@ jspm_packages
 
 # ignore generated files and folders
 dist
+app/css
 *.css
 
 # ignore source and processing images
