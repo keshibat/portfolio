@@ -419,14 +419,21 @@ a.project_url {
 .contact__logos {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
 
 }
 
-.contact__logos .social {
-  align-self: center;
-  flex: 1;
+.fa {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
 }
+
+// .contact__logos .social {
+//   align-self: center;
+//   flex: 1;
+// }
 
 /* ==========================================================================
   Footer section
