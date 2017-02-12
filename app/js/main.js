@@ -62,14 +62,16 @@ var ViewModel = function() {
     // Sets the currentModal to the default of zero indexed item.
     this.currentModal = ko.observable( this.portfolioModalList()[0] );
 
-    // Used with data bind 'visible'. False means hidden.
+    // Used with data bind 'style'. False means 'display: none'.
     this.toggleModal = ko.observable(false);
 
     // Sets the clickedModal to the currentModal for render,
     // and toggles 'visible' to true i.e. to visible.
     this.selectModal = function(clickedModal) {
         // console.log('you clicked on a modal');
+        // selects the modal object.
         self.currentModal(clickedModal);
+        // true sets css style to 'display: block'.
         self.toggleModal(true);
     };
 

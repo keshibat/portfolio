@@ -17,7 +17,7 @@
 				</section>
 
 				<!-- Modal start -->
-				<div class="modal" data-bind="with:currentModal, visible: toggleModal">
+				<div class="modal" data-bind="with:currentModal, style: { display: toggleModal() == true ? 'block' : 'none' }">
 
 					<span class="close" data-bind="click: $parent.closeModal">&times;</span>
 					
