@@ -3,6 +3,7 @@ var portfolioModals = [
         portfolioImage: "images/python_blog_medium.png",
         portfolioAlt: "Udacity - Blog App",
         portfolioTitle: "Blog App",
+        portfolioSnippet: "Python | Google App Engine | Jinja2",
         portfolioDemoURL: "https://cubiio-blog.appspot.com/",
         portfolioSourceURL: "https://github.com/cubiio/fsnd-blog",
         portfolioSummary: "Built with Python, Google App Engine, and Jinja2. Functionality includes user access controls with signup, login and logout, and password hashing. CRUD local permission systems for posts, comments and likes."
@@ -10,6 +11,7 @@ var portfolioModals = [
         portfolioImage: "images/item_catalog_medium.png",
         portfolioAlt: "Udacity - Item Catalogue App",
         portfolioTitle: "Item Catalogue App",
+        portfolioSnippet: "Python | Flask | SQLAlchemy | Jinja2",
         portfolioDemoURL: "https://github.com/cubiio/fsnd-item_catalog",
         portfolioSourceURL: "https://github.com/cubiio/fsnd-item_catalog",
         portfolioSummary: "Built with Python Flask, SQLAlchemy, Jinja2 and Bootstrap. Functionality includes OAuth v2.0 integration for Google accounts, and CRUD with CSRF protection for entries and local permission systems."
@@ -17,6 +19,7 @@ var portfolioModals = [
         portfolioImage: "images/wikipediaViewer_medium.png",
         portfolioAlt: "Free Code Camp - Wikipedia Viewer App",
         portfolioTitle: "Wikipedia Viewer App",
+        portfolioSnippet: "Javascript | jQuery | 3rd Party API",
         portfolioDemoURL: "http://fccwikipediaviewer.surge.sh/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-wikipediaViewer",
         portfolioSummary: "Built with Javascript, HTML and CSS. Based on user input a call is made to Wikipedia API and search results displayed in the app."
@@ -24,6 +27,7 @@ var portfolioModals = [
         portfolioImage: "images/localWeather_medium.png",
         portfolioAlt: "Free Code Camp - Local Weather App",
         portfolioTitle: "Local Weather App",
+        portfolioSnippet: "Javascript | jQuery | 3rd Party API",
         portfolioDemoURL: "http://local-weather-fcc.surge.sh/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-localWeather",
         portfolioSummary: "Built with Javascript and jQuery. An API call to DarkSky returns weather local to the user."
@@ -31,6 +35,7 @@ var portfolioModals = [
         portfolioImage: "images/randomQuote_medium.png",
         portfolioAlt: "Free Code Camp - Random Quotes App",
         portfolioTitle: "Random Quotes App",
+        portfolioSnippet: "Javascript",
         portfolioDemoURL: "https://cubiio.github.io/fccfe-randomQuoteGenerator/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-randomQuoteGenerator",
         portfolioSummary: "Buit with Javascript, this app displays a random quote. The user may Tweet the random quote via a Tweet button."
@@ -41,6 +46,7 @@ var Portfolio = function(data) {
     this.portfolioImage = ko.observable(data.portfolioImage);
     this.portfolioAlt = ko.observable(data.portfolioAlt);
     this.portfolioTitle = ko.observable(data.portfolioTitle);
+    this.portfolioSnippet = ko.observable(data.portfolioSnippet);
     this.portfolioDemoURL = ko.observable(data.portfolioDemoURL);
     this.portfolioSourceURL = ko.observable(data.portfolioSourceURL);
     this.portfolioSummary = ko.observable(data.portfolioSummary);
