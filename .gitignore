@@ -20,6 +20,7 @@ dist
 app/css
 app/index.html
 *.css
+index.html
 
 # ignore source and processing images
 app/images_src

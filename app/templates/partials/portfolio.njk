@@ -11,13 +11,15 @@
 							<img class="project__img" src="" data-bind="attr: {src: portfolioImage}">
 							<div class="project__title" data-bind="text: portfolioTitle"><h4> </h4>
 							</div>
+							<div class="project__snippet" data-bind="text: portfolioSnippet"><p> </p>
+							</div>
 						</div>
 					</div>
 				</div>
 				</section>
 
 				<!-- Modal start -->
-				<div class="modal" data-bind="with:currentModal, visible: toggleModal">
+				<div class="modal" data-bind="with:currentModal, style: { display: toggleModal() == true ? 'block' : 'none' }">
 
 					<span class="close" data-bind="click: $parent.closeModal">&times;</span>
 					
