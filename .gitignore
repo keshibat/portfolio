@@ -19,6 +19,7 @@ jspm_packages
 dist
 app/css
 *.css
+index.html
 
 # ignore source and processing images
 app/images_src
