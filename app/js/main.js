@@ -6,13 +6,13 @@
 
 var portfolioModals = [
     {
-        portfolioImage: "images/python_blog_medium.png",
-        portfolioAlt: "Udacity - Blog App",
-        portfolioTitle: "Blog App",
-        portfolioSnippet: "Python | Google App Engine | Jinja2",
-        portfolioDemoURL: "https://cubiio-blog.appspot.com/",
-        portfolioSourceURL: "https://github.com/cubiio/fsnd-blog",
-        portfolioSummary: "Built with Python, Google App Engine, and Jinja2. Functionality includes user access controls with signup, login and logout, and password hashing. CRUD local permission systems for posts, comments and likes."
+        portfolioImage: "images/map_medium.png",
+        portfolioAlt: "Udacity - Map App",
+        portfolioTitle: "Map App",
+        portfolioSnippet: "MVVM | JavaScript | Knockout.js | 3rd Party APIs",
+        portfolioDemoURL: "http://cubiio-map.surge.sh/",
+        portfolioSourceURL: "https://github.com/cubiio/fsnd-neighbourhood-map",
+        portfolioSummary: "Built with a MVVM design paradigm, using JavaScript and Knockout.js. APIs used are Google Maps for the map and location markers with venue information accessed via Foursquare. Functionality includes user input to filter the list of venues, and users can favourite locations."
     }, {
         portfolioImage: "images/item_catalog_medium.png",
         portfolioAlt: "Udacity - Item Catalogue App",
@@ -21,6 +21,14 @@ var portfolioModals = [
         portfolioDemoURL: "https://github.com/cubiio/fsnd-item_catalog",
         portfolioSourceURL: "https://github.com/cubiio/fsnd-item_catalog",
         portfolioSummary: "Built with Python Flask, SQLAlchemy, Jinja2 and Bootstrap. Functionality includes OAuth v2.0 integration for Google accounts, and CRUD with CSRF protection for entries and local permission systems."
+    }, {
+        portfolioImage: "images/python_blog_medium.png",
+        portfolioAlt: "Udacity - Blog App",
+        portfolioTitle: "Blog App",
+        portfolioSnippet: "Python | Google App Engine | Jinja2",
+        portfolioDemoURL: "https://cubiio-blog.appspot.com/",
+        portfolioSourceURL: "https://github.com/cubiio/fsnd-blog",
+        portfolioSummary: "Built with Python, Google App Engine, and Jinja2. Functionality includes user access controls with signup, login and logout, and password hashing. CRUD local permission systems for posts, comments and likes."
     }, {
         portfolioImage: "images/wikipediaViewer_medium.png",
         portfolioAlt: "Free Code Camp - Wikipedia Viewer App",
@@ -37,14 +45,6 @@ var portfolioModals = [
         portfolioDemoURL: "http://local-weather-fcc.surge.sh/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-localWeather",
         portfolioSummary: "Built with Javascript and jQuery. An API call to DarkSky returns weather local to the user."
-    }, {
-        portfolioImage: "images/randomQuote_medium.png",
-        portfolioAlt: "Free Code Camp - Random Quotes App",
-        portfolioTitle: "Random Quotes App",
-        portfolioSnippet: "Javascript",
-        portfolioDemoURL: "https://cubiio.github.io/fccfe-randomQuoteGenerator/",
-        portfolioSourceURL: "https://github.com/cubiio/fccfe-randomQuoteGenerator",
-        portfolioSummary: "Buit with Javascript, this app displays a random quote. The user may Tweet the random quote via a Tweet button."
     }
 ];
 
