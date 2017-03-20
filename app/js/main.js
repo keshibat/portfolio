@@ -8,11 +8,19 @@ var portfolioModals = [
     {
         portfolioImage: "images/map_medium.png",
         portfolioAlt: "Udacity - Map App",
-        portfolioTitle: "Map App",
+        portfolioTitle: "Neighbourhood Map App",
         portfolioSnippet: "MVVM | JavaScript | Knockout.js | 3rd Party APIs",
         portfolioDemoURL: "http://cubiio-map.surge.sh/",
         portfolioSourceURL: "https://github.com/cubiio/fsnd-neighbourhood-map",
         portfolioSummary: "Built with a MVVM design paradigm, using JavaScript and Knockout.js. APIs used are Google Maps for the map and location markers with venue information accessed via Foursquare. Functionality includes user input to filter the list of venues, and users can favourite locations."
+    }, {
+        portfolioImage: "images/markdown-previewer_medium.png",
+        portfolioAlt: "Markdown Previewer App",
+        portfolioTitle: "Markdown Previewer App",
+        portfolioSnippet: "React.js",
+        portfolioDemoURL: "https://build-cneetxakhr.now.sh/",
+        portfolioSourceURL: "https://github.com/cubiio/react-markdownPreviewer",
+        portfolioSummary: "Built with React.js, user typed markdown is rendered in HTML in the preview pane."
     }, {
         portfolioImage: "images/item_catalog_medium.png",
         portfolioAlt: "Udacity - Item Catalogue App",
@@ -31,7 +39,7 @@ var portfolioModals = [
         portfolioSummary: "Built with Python, Google App Engine, and Jinja2. Functionality includes user access controls with signup, login and logout, and password hashing. CRUD local permission systems for posts, comments and likes."
     }, {
         portfolioImage: "images/wikipediaViewer_medium.png",
-        portfolioAlt: "Free Code Camp - Wikipedia Viewer App",
+        portfolioAlt: "Wikipedia Viewer App",
         portfolioTitle: "Wikipedia Viewer App",
         portfolioSnippet: "Javascript | jQuery | 3rd Party API",
         portfolioDemoURL: "http://fccwikipediaviewer.surge.sh/",
@@ -39,12 +47,20 @@ var portfolioModals = [
         portfolioSummary: "Built with Javascript, HTML and CSS. Based on user input a call is made to Wikipedia API and search results displayed in the app."
     }, {
         portfolioImage: "images/localWeather_medium.png",
-        portfolioAlt: "Free Code Camp - Local Weather App",
+        portfolioAlt: "Local Weather App",
         portfolioTitle: "Local Weather App",
         portfolioSnippet: "Javascript | jQuery | 3rd Party API",
         portfolioDemoURL: "http://local-weather-fcc.surge.sh/",
         portfolioSourceURL: "https://github.com/cubiio/fccfe-localWeather",
         portfolioSummary: "Built with Javascript and jQuery. An API call to DarkSky returns weather local to the user."
+    }, {
+        portfolioImage: "images/drum-machine_medium.png",
+        portfolioAlt: "JavaScript Drum Machine",
+        portfolioTitle: "JavaScript Drum Machine",
+        portfolioSnippet: "Javascript",
+        portfolioDemoURL: "http://cubiio-drumhook.surge.sh/",
+        portfolioSourceURL: "https://github.com/cubiio/js-drum-machine",
+        portfolioSummary: "Built with Javascript. A simple drum machine, hit a key and a drum sound plays."
     }
 ];
 
