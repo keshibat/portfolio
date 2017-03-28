@@ -14,10 +14,18 @@ var portfolioModals = [
         portfolioSourceURL: "https://github.com/cubiio/fsnd-neighbourhood-map",
         portfolioSummary: "Built with a MVVM design paradigm, using JavaScript and Knockout.js. APIs used are Google Maps for the map and location markers with venue information accessed via Foursquare. Functionality includes user input to filter the list of venues, and users can favourite locations."
     }, {
+        portfolioImage: "images/pomodoro_medium.png",
+        portfolioAlt: "Pomodoro Clock App",
+        portfolioTitle: "Pomodoro Clock App",
+        portfolioSnippet: "JavaScript | React.js",
+        portfolioDemoURL: "http://cubiio-pomodoro.surge.sh/",
+        portfolioSourceURL: "https://github.com/cubiio/pomodoro-app",
+        portfolioSummary: "Built with React.js and JavaScript, the user can increase or decrease the timers. After each timer elapses sound plays to alert the user."
+    }, {
         portfolioImage: "images/markdown-previewer_medium.png",
         portfolioAlt: "Markdown Previewer App",
         portfolioTitle: "Markdown Previewer App",
-        portfolioSnippet: "React.js",
+        portfolioSnippet: "JavaScript | React.js",
         portfolioDemoURL: "https://build-cneetxakhr.now.sh/",
         portfolioSourceURL: "https://github.com/cubiio/react-markdownPreviewer",
         portfolioSummary: "Built with React.js, user typed markdown is rendered in HTML in the preview pane."
