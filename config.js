@@ -10,6 +10,16 @@ const config = {
 		dest: 'dist/fonts'
 	},
 
+	htaccess: {
+		src: 'app/.htaccess',
+		dest: 'dist/'
+	},
+
+	txt: {
+		src: 'app/**/*.txt',
+		dest: 'dist/'
+	},
+
 	html: {
 		src: 'app/*.html'
 	},

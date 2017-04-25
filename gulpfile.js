@@ -48,6 +48,18 @@ gulp.task('default', function(callback) {
         );
 });
 
+// build helper task: copy '.htaccess' to /dist
+gulp.task('copy-build-htaccess', function() {
+    return gulp.src(config.htaccess.src)
+        .pipe(gulp.dest(config.htaccess.dest));
+});
+
+// build helper task: copy .txt files to /dist
+gulp.task('copy-build-txtfiles', function() {
+    return gulp.src(config.txt.src)
+        .pipe(gulp.dest(config.txt.dest));
+});
+
 
 // combined build task - updated files go to /dist
 gulp.task('build', function(callback) {
@@ -56,6 +68,8 @@ gulp.task('build', function(callback) {
         ['sprites', 'lint:js', 'lint:scss'],
         ['sass', 'nunjucks'],
         ['useref', 'build-images', 'fonts'],
+        ['copy-build-htaccess', 'copy-build-txtfiles'],
+        
 
         // add in if JS tests to run
         // ['useref', 'build-images', 'fonts', 'test'],
