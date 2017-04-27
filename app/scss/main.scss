@@ -16,13 +16,13 @@ html {
 
 body {
   background: #fafafa;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #333;
 }
 
 a {
   background: #fafafa;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #333;
   transition: all 0.5s;
 }
@@ -69,10 +69,11 @@ a:hover {
 
 .header__title {
   font-weight: 300;
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 0.75em 0.25em;
   display: inline-block;
   color: #212121;
+  font-family: 'VT323', monospace;
 }
 
 .header__menu {
@@ -456,4 +457,9 @@ a.project_url {
 .footer__container {
   display: flex;
   justify-content: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.2em;
+  a {
+    font-family: 'VT323', monospace;
+  }
 }
