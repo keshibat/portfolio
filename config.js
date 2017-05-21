@@ -1,7 +1,8 @@
 const config = {
 
 	browserSync: {
-		browser: 'google chrome canary',
+		browser: 'google chrome',
+		// browser: 'google chrome canary',
 		notify: true
 	},
 
@@ -33,7 +34,7 @@ const config = {
 		options: {
 			// enables the linter to fix errors
 			fix: true,
-			configPath: '.jscsrc'	
+			configPath: '.jscsrc'
 		}
 	},
 

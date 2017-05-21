@@ -19,11 +19,9 @@ const plumber = require('gulp-plumber');
 const fs = require('fs')
 
 
-// require config
+// config for Gulp settings and other (secret) stuff
 const config = require('./config.js');
-
-// require creds
-const creds =  require('/Users/samatkins/projects/info/secrets.json');
+const creds =  require('/Users/samatkins/repos/config/secrets.json');
 
 
 /* ==========================================================================
@@ -34,11 +32,11 @@ const creds =  require('/Users/samatkins/projects/info/secrets.json');
 // combined dev task
 gulp.task('default', function(callback) {
     runSequence(
-        'clean:dev', 
-        
+        'clean:dev',
+
         // toggle: lint ON
         // ['sprites', 'lint:js', 'lint:scss'],
-        
+
         // toggle: lint OFF
         ['sprites'],
 
@@ -69,11 +67,11 @@ gulp.task('build', function(callback) {
         ['sass', 'nunjucks'],
         ['useref', 'build-images', 'fonts'],
         ['copy-build-htaccess', 'copy-build-txtfiles'],
-        
+
 
         // add in if JS tests to run
         // ['useref', 'build-images', 'fonts', 'test'],
-        
+
         callback
         );
 })
@@ -122,7 +120,7 @@ gulp.task('sass', function() {
 
 
 // useref for cache busting
-gulp.task('useref', function() {    
+gulp.task('useref', function() {
     return gulp.src(config.useref.src)
         .pipe($.useref())
         .pipe($.cached('useref'))
@@ -137,7 +135,7 @@ gulp.task('useref', function() {
 
 
 /* ==========================================================================
-    browser sync, watchers and cleaners 
+    browser sync, watchers and cleaners
 ========================================================================== */
 
 
@@ -162,7 +160,7 @@ gulp.task('watch', function() {
         ], ['nunjucks'])
     gulp.watch(config.sass.src, ['sass']);
     // gulp.watch(config.js.src, ['watch-js']);
-    // add to config 
+    // add to config
     gulp.watch(config.html.src, browserSync.reload);
 });
 
@@ -191,7 +189,7 @@ gulp.task('clean:responsive', function() {
 })
 
 
-// clears cache for imagemin 
+// clears cache for imagemin
 gulp.task('cache:clear', function (callback) {
     return cache.clearAll(callback)
 })
@@ -209,16 +207,16 @@ gulp.task('serve:dist', function() {
             baseDir: 'dist'
         },
         browser: 'google chrome',
-        notify: false       
+        notify: false
     })
 })
 
 
-// rsync deploy to server 
+// rsync deploy to server
 gulp.task('rsync', function() {
     rsync({
         src: 'dist/',
-        // amend dest path 
+        // amend dest path
         dest: creds.samat.dest,
         ssh: true,
         recursive: true,
@@ -233,7 +231,7 @@ gulp.task('rsync', function() {
 })
 
 
-// deploy to surge.sh, change url in config 
+// deploy to surge.sh, change url in config
 gulp.task('surge', [], function () {
   return surge({
         project:    config.surge.project,
@@ -275,7 +273,7 @@ gulp.task('imagesgm', function() {
 });
 
 
-// use imagemin then move to folder images 
+// use imagemin then move to folder images
 gulp.task('imagesmin', function() {
     return gulp.src('app/responsive/**/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(cache(imagemin()))
@@ -283,7 +281,7 @@ gulp.task('imagesmin', function() {
 });
 
 
-// copies any images in fixed to images folder 
+// copies any images in fixed to images folder
 gulp.task('copy-fixed-images', function() {
     return gulp.src('./app/images_src/fixed/**/*')
         .pipe(gulp.dest('./app/images/'));
@@ -298,7 +296,7 @@ gulp.task('clean:responsive', function() {
 })
 
 
-// clears cache for imagemin 
+// clears cache for imagemin
 gulp.task('cache:clear', function (callback) {
     return cache.clearAll(callback)
 })
@@ -361,14 +359,14 @@ function customPlumber(errTitle) {
 ========================================================================== */
 
 
-// SCSS linting 
+// SCSS linting
 gulp.task('lint:scss', function() {
     return gulp.src(config.sass.src)
     .pipe($.scssLint(config.scssLint));
 });
 
 
-// JS linting 
+// JS linting
 gulp.task('lint:js', function() {
     return gulp.src(config.js.src)
     .pipe(customPlumber('JSHint Error'))
@@ -402,7 +400,7 @@ gulp.task('fonts', function() {
 
 
 /* ==========================================================================
-    testing 
+    testing
 ========================================================================== */
 
 
@@ -423,12 +421,12 @@ gulp.task('tdd', function (done) {
 });
 
 // notes
-// 
+//
 // process.cwd()
 // returns current working directory
 // i.e. directory from which node / gulp command invoked
-// 
-// __dirname 
+//
+// __dirname
 // returns the directory name containing JS source code file
 
 
