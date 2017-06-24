@@ -19,6 +19,7 @@ jspm_packages
 dist
 app/css
 app/index.html
+app/404.html
 *.css
 index.html
 
