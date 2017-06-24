@@ -16,13 +16,13 @@ html {
 
 body {
   background: #fafafa;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #333;
 }
 
 a {
   background: #fafafa;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #333;
   transition: all 0.5s;
 }
@@ -55,6 +55,7 @@ a:hover {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
 }
 
 .header__logo {
@@ -69,10 +70,11 @@ a:hover {
 
 .header__title {
   font-weight: 300;
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 0.75em 0.25em;
   display: inline-block;
   color: #212121;
+  font-family: 'VT323', monospace;
 }
 
 .header__menu {
@@ -126,29 +128,35 @@ Hero Section
 
 .hero__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
 }
 
+.hero__profile { 
+  display: flex;
+  align-self: center;
+  width: 150px;
+  border-radius: 75px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.hero__tagline {
+  display: flex;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #212121;
+}
+
 .hero__intro {
-  max-width: 55%;
-  padding: 10px;
+  max-width: 45%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
-.hero__img {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero__caption {
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-}
 
 /* ==========================================================================
   Portfolio Section 
@@ -243,8 +251,7 @@ a.project__url {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: white;
 }
 
 /* Modal Content (image) */
@@ -261,15 +268,14 @@ a.project__url {
     width: 80%;
     max-width: 700px;
     text-align: center;
-    color: #ccc;
+    color: black;
     padding: 10px 0;
     height: 150px;
 }
 
 a.project_url {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  color: #ccc;
+  background-color: white;
+  color: black;
 }
 
 /* Add Animation */
@@ -428,13 +434,15 @@ a.project_url {
 .contact__logos {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
 
 }
 
-.contact__logos .social {
-  align-self: center;
-  flex: 1;
+.fa {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
 }
 
 /* ==========================================================================
@@ -450,4 +458,9 @@ a.project_url {
 .footer__container {
   display: flex;
   justify-content: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.2em;
+  a {
+    font-family: 'VT323', monospace;
+  }
 }

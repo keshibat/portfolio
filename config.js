@@ -1,8 +1,24 @@
 const config = {
 
+	browserSync: {
+		browser: 'google chrome',
+		// browser: 'google chrome canary',
+		notify: true
+	},
+
 	fonts: {
 		src: 'app/fonts**/*',
 		dest: 'dist/fonts'
+	},
+
+	htaccess: {
+		src: 'app/.htaccess',
+		dest: 'dist/'
+	},
+
+	txt: {
+		src: 'app/**/*.txt',
+		dest: 'dist/'
 	},
 
 	html: {
@@ -18,7 +34,7 @@ const config = {
 		options: {
 			// enables the linter to fix errors
 			fix: true,
-			configPath: '.jscsrc'	
+			configPath: '.jscsrc'
 		}
 	},
 

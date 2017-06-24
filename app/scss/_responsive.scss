@@ -14,8 +14,8 @@
 	.header__title {
 		margin-left: 0.1em;
 		margin-top: 2em;
-		font-size: 1em;
-		width: 55%;
+		font-size: 0.8em;
+		width: 65%;
 	}
 
 	.nav {
@@ -59,9 +59,24 @@
 		overflow: hidden;
 	}
 
-	.contact__logos .social {
+	.hero__tagline {
+	padding-left: 30px;
+  align-text: center;
+}
+
+	.about__skills {
+		font-size: 0.9em;
+		// text-align: center;
+	}
+
+	.contact__logos {
 		margin-right: 4px;
 	}
+
+	.footer__wrapper {
+		text-align: center;
+	}
+
 }
 
 /* ==========================================================================
