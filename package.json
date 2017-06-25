@@ -55,6 +55,7 @@
     "karma-jasmine": "^1.1.0",
     "psi": "^2.0.4",
     "rsyncwrapper": "^2.0.1",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "standard": "^10.0.2"
   }
 }
